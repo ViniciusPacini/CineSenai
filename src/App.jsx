@@ -1,12 +1,15 @@
-import { Rodape } from "./components/Rodape";
-
 function App() {
+
   return (
-    <>
-    <h1>cineSenai</h1>
-    <Rodape />
-    <Rodape />
-    </>
+
+    <div className="container">
+      <h1>
+        Cine<span style={{color: "var(--primary)"}}>Senai</span>
+        <p style={{color: "var(--text-secondary)"}}>
+          Catálogo de filme em breve.
+        </p>
+      </h1>
+    </div>
   );
 }
 
