@@ -12,10 +12,12 @@ export const CartaoDeVisita = () => {
             </h2>
 
         <p>
-            {cidade}
+           Cidade: {cidade}
         </p>
-        <p>Quero aprender mais sobre react.</p>
+        <p>Quero aprender react para criar.</p>
         </div>
         
     );
-}
+};
+
+

@@ -1,15 +1,16 @@
+import { Navbar } from "./components/Navbar";
+
+
 function App() {
 
   return (
-
-    <div className="container">
-      <h1>
-        Cine<span style={{color: "var(--primary)"}}>Senai</span>
-        <p style={{color: "var(--text-secondary)"}}>
-          Catálogo de filme em breve.
-        </p>
-      </h1>
-    </div>
+<>
+<Navbar />
+<div className="container">
+  <h1>Catálogo</h1>
+</div>
+</>
+ 
   );
 }
 
