@@ -51,7 +51,7 @@ export const Home = () => {
                 <h2 className="catalog-title">Nosso Catálogo</h2>
             </div>
 
-            <div className="movie-grid">
+            {/*<div className="movie-grid">
                 {filmes.map((filme) => (
                     <FilmeCard
                         key={filme.id}
@@ -62,7 +62,40 @@ export const Home = () => {
                         descricao={filme.descricao}
                     />
                 ))}
+            </div>*/}
+
+<p> 
+   {filmes.length}  {filmes.length === 1 ?  "Filme" : "Filmes" } em cartaz. 
+</p>
+
+            {filmes.length > 0 ? (
+                <div className="movie-grid">
+                    {filmes.map((filme) => (
+                        <FilmeCard
+                            key={filme.id}
+                            titulo={filme.titulo}
+                            genero={filme.genero}
+                            duracaoMinutos={filme.duracaoMinutos}
+                            urlPoster={filme.urlPoster}
+                            descricao={filme.descricao}
+                        />
+                    ))}
+                </div>
+            ) : (
+                <div className="glass home-empty">
+                    <svg className="home-empty-icon" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                    </svg>
+                    <h3 className="home-empty-tittle">Nenhum filme encontrado</h3>
+                    <p className="home-empty-text">Tente alterar os termos da busca ou selecionar outro gênero.
+
+                    </p>
+                </div>
+            )}
             </div>
-        </div>
-    )
-}
+    );
+    };
+
+
+
